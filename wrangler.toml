@@ -1,0 +1,16 @@
+name = "csk-insider-alert"
+main = "src/index.ts"
+compatibility_date = "2023-03-22"
+
+[triggers]
+crons = [ "*/1 * * * *" ]
+
+[env.dev]
+kv_namespaces = [
+  { binding = "KV_MATCHES", id = "48b3ae71878340aa9d90a2b5dfff30ce", preview_id = "48b3ae71878340aa9d90a2b5dfff30ce" }
+]
+
+[env.production]
+kv_namespaces = [
+  { binding = "KV_MATCHES", id = "b1a89525b1dc4fd39fdf435b3be3383b" }
+]
